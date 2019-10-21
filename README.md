@@ -1,12 +1,12 @@
-#Build envrironment
+# Build envrironment
 
 Prepare Ubuntu 18.04 desktop
 
-#Prepare snapcraft
+# Prepare snapcraft
 
 snap install --classic snapcraft
 
-#Build
+# Build
 
 Cross on x86 systems
 Just run snapcraft in the top of the gadget or kernel folder
