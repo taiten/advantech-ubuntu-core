@@ -1,0 +1,26 @@
+name: advantech-imx6-kernel
+version: 4.14
+summary: A Advantech custom kernel built for i.mx6 devices
+description: This provides a kernel snap for advantech i.mx6 board
+type: kernel
+architectures: [armhf]
+confinement: strict
+
+parts:
+  kernel:
+    plugin: kernel
+    source: https://github.com/ADVANTECH-Corp/linux-imx6.git
+    source-branch: imx_4.14.98_2.0.0_ga
+    source-type: git
+    kdefconfig: [imx_v7_adv_defconfig]
+    kconfigs:
+      - CONFIG_LOCALVERSION="-advantech-imx6"
+      - CONFIG_SQUASHFS=m
+      - CONFIG_SQUASHFS_XZ=y
+      - CONFIG_SQUASHFS_XATTR=y
+    kernel-initrd-modules:
+      - squashfs
+    kernel-image-target: zImage
+    kernel-with-firmware: false
+    build-packages: [debootstrap, lsb-release, lzop]
+
