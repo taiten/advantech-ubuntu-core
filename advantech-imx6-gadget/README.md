@@ -1,4 +1,4 @@
-# Nitrogen6x Gadget Snap
+# Advantech imx6 Gadget Snap
 
 This repository contains the source for an Ubuntu Core gadget snap
 for the Nitrogen6x. Building it with snapcraft will
