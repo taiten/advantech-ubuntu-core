@@ -19,7 +19,7 @@ https://github.com/snapcore/snapd/wiki/Gadget-snap
 Just run snapcraft in the top of the srouce tree.
 
 ```
-snapcraft --target-arch=armhf
+snapcraft --target-arch=armhf --destructive-mode
 ```
 
 ### Loading u-boot environment setting for Ubuntu Core
